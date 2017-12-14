@@ -22,6 +22,12 @@ jobs:
     after_success:
     - yarn add -D semantic-release@11.0.1
     - yarn semantic-release
+  - stage: danger
+    node_js: 8
+    os: linux
+    script: 
+      - npx danger@^2
+
 cache:
   yarn: true
 branches:
